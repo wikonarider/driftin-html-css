@@ -3,12 +3,12 @@
 }
 
 body {
-    font-family: 'Krona One', sans-serif;
+    font-family: 'Pontano Sans', sans-serif;
     margin: 0;
 }
 
-h1 { font-size: 3.5 em;}
-h2 { font-size: 2.7 em;}
+h1 { font-size: 3.5 em; font-family: 'Krona One', sans-serif;}
+h2 { font-size: 2.7 em; font-family: 'Krona One', sans-serif;}
 h3 { font-size: 2 em;}
 p{
     font-size: 1.25em;
@@ -22,6 +22,7 @@ button {
     box-shadow:2px 2px 10px #0f0f0f;
     color:#0f0f0f;
     background-color: #F9AE54 ;
+    border-radius: 0.2em;
 }
 button:hover{
     background-color: #fdd249  ;
@@ -30,4 +31,272 @@ button:hover{
 .container {
     max-width: 1400px;
     margin: auto;
+}
+
+.color-acento {
+    color:#F9AE54;
+    font-weight: bold;
+}
+header {
+    background-color: #fdf9eb;
+}
+
+header .logo{
+    margin: 0;
+    padding: 25px 30px;
+    font-weight: bold;
+    color: #F9AE54;
+    font-size: 1.6em;
+    font-family: 'Krona One', sans-serif;
+}
+
+header .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+header .nav {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding-bottom: 25px;
+}
+
+header a{
+    padding: 5px 12px;
+    text-decoration: none;
+    font-weight: bold;
+    color:black ;
+
+}
+
+header a:hover{
+    color:#FA9584 ;
+}
+
+#hero{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+    height: 90vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    color:white;
+    background-image: linear-gradient(0deg,
+     rgba(0,0,0,0.2), 
+     rgba(0,0,0,0.2)
+     )
+     , url("media/hero.jpg");
+}
+
+#hero h1 {
+    color:white
+
+}
+
+#somos-driftin .container{
+    text-align: center;
+    padding:200px 12px;
+}
+
+#nuestros-servicios {
+    background-color: #F9AE54;
+    color: white;
+    text-align: center;
+}
+
+#nuestros-servicios .container {
+    padding: 100px 0px;
+}
+
+#nuestros-servicios h2 {
+    margin-top: 0;
+}
+
+#nuestros-servicios p {
+    display: none;
+}
+
+#nuestros-servicios .carta {
+    background-size: cover;
+    background-position: center center;
+    padding: 50px 0px;
+    margin: 30px;
+    border-radius: 15px;
+}
+
+.carta:first-child {
+    background-image: linear-gradient(0deg,
+    rgba(0,0,0,0.2), 
+    rgba(0,0,0,0.2)
+    )
+    , url("media/diseño.jpg");
+}
+.carta:nth-child(2) {
+    background-image: linear-gradient(0deg,
+    rgba(0,0,0,0.2), 
+    rgba(0,0,0,0.2)
+    )
+    , url("media/responsive1.jpg");
+}
+.carta:nth-child(3) {
+    background-image: linear-gradient(0deg,
+    rgba(0,0,0,0.2), 
+    rgba(0,0,0,0.2)
+    )
+    , url("media/contacto.jpg");
+}
+
+#caracteristicas .container {
+    text-align: center;
+    padding: 250px 12px;
+
+}
+#caracteristicas li {
+margin: 16px 0px;
+font-weight: bold;
+}
+
+#contactanos {
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+text-align: center;
+background-color: #FA9584;
+color: white;
+height: 80vh;
+}
+
+footer{
+    background-color: #fdf9eb;
+}
+
+footer p{
+    margin: 0;
+    padding: 12px;
+    color: gray;
+}
+
+footer .container{
+height: 150px;
+display: flex;
+justify-content: center;
+align-items: flex-end;
+}
+
+/* START MEDIA QUERY, cuando la pantalla llegue al tamaño indicado aplicará ciertos estilos. Los selectores tienen que ser los mismas declarados anteriormente para que se reemplacen */
+@media (min-width: 720px) {
+
+    header {
+     /* Para fijar la Nav Bar, al hacer esto siempre darle el ancho del 100%*/
+        position: fixed;
+        width: 100%;
+    }
+
+    header .container{
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    header nav {
+        flex-direction: row;
+        padding-bottom: 0;
+        padding-right: 20px;
+    }
+    
+    #hero h1 {
+        font-size: 3em;
+    }
+    #somos-driftin .container {
+    display: flex;
+    justify-content: space-evenly;
+    }
+    
+    #somos-driftin .texto{
+        width: 50%;
+        max-width: 600px;
+        text-align: initial;
+        padding-left: 30px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    #somos-driftin h2 {
+        margin-top: 0px;
+    }
+    #somos-driftin .img-container {
+        background-image: url("media/somos-diftin.jpg");
+        background-size: cover;
+        background-position: center center;
+        height: 200px;
+        width: 400px;
+    }
+
+    #nuestros-servicios .servicios {
+        display: flex;
+        justify-content: center;
+    }
+
+    #nuestros-servicios p {
+        display:flexbox;
+        margin-bottom: 30px;
+    }
+
+    #nuestros-servicios h3{
+        margin-top: 0;
+    }
+
+    #nuestros-servicios .carta{
+        padding: 50px;
+        background-size: 100% 200px;
+        background-repeat: no-repeat;
+        background-position-y: 0;
+        box-shadow: 2px 2px 10px rgba(0,0,0,0.5);
+    }
+
+    .carta:first-child{
+        background-image: linear-gradient(
+            0deg,
+            rgba(0,0,0,0.5),
+            rgba(0,0,0,0.5)
+        )
+        ,url("media/diseño.jpg");
+
+    }
+
+    .carta:nth-child(2){
+        background-image: linear-gradient(
+            0deg,
+            rgba(0,0,0,0.5),
+            rgba(0,0,0,0.5)
+        )
+        ,url("media/responsive1.jpg");
+    }
+
+    .carta:nth-child(3){
+        background-image: linear-gradient(
+            0deg,
+            rgba(0,0,0,0.5),
+            rgba(0,0,0,0.5)
+        )
+        ,url("media/contacto.jpg");
+
+    }
+
+    #final h2{
+        font-size: 5em;
+    }
+
+    #final button{
+        font-size: 2em;
+    }
+
+    footer .container{
+        justify-content: center;
+    }
 }
